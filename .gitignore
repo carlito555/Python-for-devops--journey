@@ -1,0 +1,13 @@
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.class
+
+# Mac system files
+.DS_Store
