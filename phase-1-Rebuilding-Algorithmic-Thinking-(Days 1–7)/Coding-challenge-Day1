@@ -1,0 +1,53 @@
+servers = [
+    {"name": "web-01", "env": "production", "cpu": 85, "status": "running"},
+    {"name": "web-02", "env": "production", "cpu": 60, "status": "running"},
+    {"name": "db-01",  "env": "production", "cpu": 95, "status": "running"},
+    {"name": "cache-01","env": "staging",   "cpu": 40, "status": "running"},
+    {"name": "worker-01","env": "staging",  "cpu": 10, "status": "stopped"},
+    {"name": "web-03", "env": "production", "cpu": 72, "status": "running"},
+    {"name": "db-02",  "env": "staging",    "cpu": 88, "status": "running"},
+    {"name": "worker-02","env": "production","cpu": 55,"status": "stopped"},
+]
+```
+
+### Your script must:
+
+**Part 1 — Basic Filtering**
+Print the names of all servers that are `"running"` and in `"production"`.
+
+**Part 2 — Alert Logic**
+Print a `"HIGH CPU ALERT"` warning for any running server with `cpu > 80`. Include the server name and CPU value in the message.
+
+**Part 3 — Summary Report**
+Print a summary that shows:
+- Total number of servers
+- How many are running vs stopped
+- Average CPU across all running servers (rounded to 1 decimal place)
+- Count of servers per environment
+
+**Part 4 — Bonus Challenge**
+Write a function called `get_critical_servers` that takes the server list and a CPU threshold as arguments, and returns a sorted list of server names (alphabetically) where the server is running and CPU exceeds the threshold.
+
+---
+
+## 📋 What Good Looks Like
+
+Your output should look something like this when you run your script:
+```
+--- Production Running Servers ---
+web-01, web-02, db-01, web-03
+
+--- CPU Alerts ---
+HIGH CPU ALERT: web-01 is at 85% CPU
+HIGH CPU ALERT: db-01 is at 95% CPU
+HIGH CPU ALERT: db-02 is at 88% CPU
+
+--- Summary Report ---
+Total servers: 8
+Running: 6 | Stopped: 2
+Average CPU (running): 73.3%
+production: 5 servers
+staging: 3 servers
+
+--- Critical Servers (threshold: 80%) ---
+['db-01', 'db-02', 'web-01']
