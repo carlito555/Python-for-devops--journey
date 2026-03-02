@@ -13,7 +13,7 @@ This repository documents my 30-day journey to master Python for infrastructure 
 
 As a DevOps Engineer and an **Oracle Cloud Infrastructure 2025 Certified Multicloud Architecture Professional**, my goal with this challenge is to bridge the gap between core Python fundamentals and production-grade automation. 
 
-**Live Portfolio:** [Visit my website](https://[Your Custom Domain]) *(Hosted via AWS S3 & Route 53)*
+**Live Portfolio:** [jaskarandevops.com](https://jaskarandevops.com/)
 
 ## 📂 Repository Structure
 The curriculum is broken down into four practical phases:
